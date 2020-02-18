@@ -6,31 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082" />
-
     <EditText
         android:id="@+id/edit_message"
         android:layout_width="match_parent"
         android:layout_height="129dp"
         android:ems="10"
-        android:textAlignment="center"
-        android:textSize="30dp"
+        android:hint="Enter Meassage here"
         android:inputType="textPersonName"
         android:text="Name"
-        android:hint="Enter Meassage here"
+        android:textAlignment="center"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="127dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="67dp" />
 
     <Button
         android:id="@+id/sendbutton"
@@ -42,6 +32,18 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="521dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="119dp"
+        android:layout_height="45dp"
+        android:text="@string/yax"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/sendbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_message" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
