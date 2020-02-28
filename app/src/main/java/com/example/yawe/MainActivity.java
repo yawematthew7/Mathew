@@ -2,22 +2,37 @@ package com.example.yawe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @SuppressLint("MissingSuperCall")
+    protected  void onCreate (Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button list=(Button)findViewById(R.id.button2);
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 =new Intent(MainActivity.this,ListViewActivity.class);
+                startActivity(intent2);
+
+            }
+        });
+
+
     }
+
     public  void sendMesaage (View view){
         EditText message = (EditText)findViewById(R.id.edit_message);
         Toast.makeText(this, "sending Message" +message.getText().toString(),Toast.LENGTH_SHORT).show();
