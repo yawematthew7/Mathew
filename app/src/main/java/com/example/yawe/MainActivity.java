@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -60,6 +61,23 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.music:
                 Toast.makeText(getApplicationContext(),"Item 2 Selected",Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.call:
+                Intent intent2 = new Intent(Intent.ACTION_DIAL);
+                intent2.setData( Uri.parse("tel:0702329920"));
+
+                startActivity(intent2);
+                return true;
+            case R.id.email:
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setData(Uri.parse("emailto:"));
+                String to[] = {"nalumagamaria001@gmail.com", "kyorigarurab@gmail.com", "annetkansiime76@gmail.com"};
+                intent.putExtra(Intent.EXTRA_EMAIL, to);
+                intent.putExtra(Intent.EXTRA_SUBJECT, "hey girls");
+                intent.putExtra(Intent.EXTRA_TEXT, "am around please");
+                intent.setType("message/rfc822");
+                startActivity(intent);
                 return true;
 
             default:
