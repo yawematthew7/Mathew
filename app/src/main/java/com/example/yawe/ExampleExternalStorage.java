@@ -29,7 +29,7 @@ public class ExampleExternalStorage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_example_external_storage);
+        setContentView(R.layout.example_external_storage);
 
         editTextMessage = findViewById(R.id.edit_message);
         buttonSave = findViewById(R.id.button_save);
